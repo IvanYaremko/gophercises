@@ -11,10 +11,8 @@ import (
 
 func QuizGo() {
 	timeLimit := flag.Int("limit", 30, "the time limit for the quiz in seconds")
-	csvFilename := flag.String("csv", "problems.csv", "a csv file in the format of 'qusetion,answer'")
+	csvFilename := flag.String("csv", "quiz/problems.csv", "a csv file in the format of 'qusetion,answer'")
 	flag.Parse()
-
-	_ = csvFilename
 
 	file, err := os.Open(*csvFilename)
 
